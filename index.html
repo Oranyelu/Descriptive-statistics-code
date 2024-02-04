@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trading Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Glitch+Pop&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- This is the entire card  section 
+    features inclued diaplay of hidden contect upon hover, spin effect on click-->
+    <section class="Card">
+      <h1>
+        EAST AFRICAN <br />
+        STATES
+      </h1>
+      <header>
+        <h1>PANTHERA LEO KENYA</h1>
+      </header>
+      <img src="assets/lion.jpeg" alt="lion" />
+
+      <article>
+        <h2>Why is the Kenyan lion so endangered?</h2>
+        <h4 style="color: white">
+          it is mainly due to poaching, loss of habitat and climate change.
+        </h4>
+      </article>
+      <!--This footer should stay hidden and only be displayed on hover-->
+      <footer>
+        <h4 class="message">
+          DID YOU KNOW? <br />
+          <p>The lion is a keystone species in its ecosystem.</p>
+        </h4>
+        <img
+          src="assets/kisspng-lion-old-school-tattoo-flash-new-school-painted-lion-head-5a6cf73d98bc59.6193171915170906216256.png"
+          alt="lion"
+        />
+      </footer>
+    </section>
+    <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient(rgb(19, 103, 5), rgb(166, 7, 7));
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .Card {
+        display: flex;
+        flex-direction: column;
+        background-image: url(assets/lion.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        border-radius: 20px;
+        border-style: groove;
+        border-width: 3px;
+        border-color: brown;
+        color: white;
+        width: 400px;
+        height: 90vh;
+        padding-left: 25px;
+        padding-right: 25px;
+        /* click the card for a spin effect*/
+        transition: transform 0.1s ease-in-out;
+      }
+      .Card:active {
+        transform: rotateY(3600deg);
+      }
+      header {
+        background-color: rgba(28, 2, 2, 0.429);
+        color: rgb(226, 30, 30);
+        padding-left: 10px;
+        padding-right: 10px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+      article {
+        background-color: rgba(28, 2, 2, 0.429);
+        color: rgb(226, 30, 30);
+        text-align: left;
+        line-height: 1.2;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+      .message {
+        background-color: rgb(166, 7, 7);
+        color: white;
+        width: 170px;
+        border-style: dashed;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+      footer {
+        display: none;
+      }
+      section:hover > footer {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        align-self: flex-end;
+        bottom: 0;
+      }
+    </style>
+  </body>
+</html>
